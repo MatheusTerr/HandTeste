@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Hand-Site/static/css/main.b3e0ad42.css",
-    "main.js": "/Hand-Site/static/js/main.38b9f481.js",
+    "main.css": "/Hand-Site/static/css/main.02628e31.css",
+    "main.js": "/Hand-Site/static/js/main.b061be3e.js",
     "index.html": "/Hand-Site/index.html",
-    "main.b3e0ad42.css.map": "/Hand-Site/static/css/main.b3e0ad42.css.map",
-    "main.38b9f481.js.map": "/Hand-Site/static/js/main.38b9f481.js.map"
+    "main.02628e31.css.map": "/Hand-Site/static/css/main.02628e31.css.map",
+    "main.b061be3e.js.map": "/Hand-Site/static/js/main.b061be3e.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3e0ad42.css",
-    "static/js/main.38b9f481.js"
+    "static/css/main.02628e31.css",
+    "static/js/main.b061be3e.js"
   ]
 }
