@@ -4,4 +4,6 @@
 
 body {
   @apply bg-[#F9F9F7] text-black font-sans;
+  margin: 0;
+  padding: 0;
 }

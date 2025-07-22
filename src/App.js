@@ -54,7 +54,7 @@ const translations = {
     esgSlogan: "ESGwashing é cafona e a gente tem bom gosto",
     footerLocation: "São Paulo e Rio de Janeiro",
     footerContact: "Contato",
-    footerGreeting: "Tenha um bom dia"
+    footerGreeting: "Have a nice day"
   },
   en: {
     location: "SÃO PAULO • RIO DE JANEIRO",
@@ -85,6 +85,7 @@ const translations = {
 
 export default function App() {
   const [language, setLanguage] = useState("pt");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = translations[language] || translations.pt;
 
   const toggleLanguage = () =>
@@ -93,6 +94,7 @@ export default function App() {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) section.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false);
   };
 
   const navItems = [
@@ -114,8 +116,9 @@ export default function App() {
     <div className="bg-[#F9F9F7] min-h-screen font-sans text-black">
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
-        <header className="flex justify-between items-center py-6">
+        <header className="flex justify-between items-center py-6 relative">
           <HandLogo />
+          {/* Menu desktop */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <button
@@ -133,6 +136,43 @@ export default function App() {
               {language === "pt" ? "EN" : "PT"}
             </button>
           </nav>
+
+          {/* Botão menu mobile */}
+          <button
+            className="md:hidden p-2 rounded-md bg-gray-200 hover:bg-gray-300"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Menu"
+          >
+            <div className="space-y-1">
+              <span className="block w-6 h-0.5 bg-black"></span>
+              <span className="block w-6 h-0.5 bg-black"></span>
+              <span className="block w-6 h-0.5 bg-black"></span>
+            </div>
+          </button>
+
+          {/* Menu mobile suspenso */}
+          {isMenuOpen && (
+            <div className="absolute top-16 left-0 w-full bg-white shadow-lg border-t border-gray-200 flex flex-col space-y-4 p-4 z-50 md:hidden">
+              {navItems.map((item) => (
+                <button
+                  key={item.key}
+                  onClick={() => scrollToSection(item.target)}
+                  className="text-lg font-medium"
+                >
+                  {t[item.key]}
+                </button>
+              ))}
+              <button
+                onClick={() => {
+                  toggleLanguage();
+                  setIsMenuOpen(false);
+                }}
+                className="bg-gray-200 text-black font-bold py-2 px-4 rounded-full transition-colors hover:bg-gray-300"
+              >
+                {language === "pt" ? "EN" : "PT"}
+              </button>
+            </div>
+          )}
         </header>
 
         {/* Hero Section */}
