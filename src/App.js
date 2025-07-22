@@ -54,7 +54,7 @@ const translations = {
     esgSlogan: "ESGwashing é cafona e a gente tem bom gosto",
     footerLocation: "São Paulo e Rio de Janeiro",
     footerContact: "CONTATO",
-    footerGreeting: "have a nice day"
+    footerGreeting: "have a nice day",
   },
   en: {
     location: "SÃO PAULO • RIO DE JANEIRO",
@@ -79,8 +79,8 @@ const translations = {
     esgSlogan: "ESGwashing is tacky and we have good taste",
     footerLocation: "São Paulo and Rio de Janeiro",
     footerContact: "CONTACT",
-    footerGreeting: "have a nice day"
-  }
+    footerGreeting: "have a nice day",
+  },
 };
 
 export default function App() {
@@ -114,11 +114,18 @@ export default function App() {
 
   return (
     <div className="bg-[#F9F9F7] min-h-screen font-sans text-black">
+<<<<<<< HEAD
       <div className="container mx-auto px-2 sm:px-4 md:px-8">
         {/* Header */}
         <header className="flex justify-between items-center py-4 sm:py-6 relative">
           <HandLogo className="h-16 sm:h-20" />
           {/* Desktop Menu */}
+=======
+      <div className="container mx-auto px-4 md:px-8">
+        {/* Header */}
+        <header className="flex justify-between items-center py-6">
+          <HandLogo />
+>>>>>>> 5b56339bfae6a09e2254e388b34d656bb65c15d0
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <button
@@ -173,6 +180,7 @@ export default function App() {
           )}
         </header>
 
+<<<<<<< HEAD
         {/* Hero Section */}
         <section id="hero" className="grid grid-cols-1 md:grid-cols-2 items-center bg-white">
           <div className="bg-[#EFE7DA] flex justify-center items-center py-10 sm:py-16 md:py-32">
@@ -187,11 +195,28 @@ export default function App() {
               {t.heroTitle}
             </h1>
             <p className="mt-2 sm:mt-8 text-base sm:text-lg text-gray-700 max-w-xl font-bold">
+=======
+        {/* Hero */}
+        <section id="hero" className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4">
+          <div className="bg-[#EFE7DA] flex justify-center items-center py-12 sm:py-20 md:py-32">
+            <img
+              src="https://ik.imagekit.io/6iz6c073z/Png%20sem%20fundo/Logo1.png?updatedAt=1750806629388"
+              alt="Logo da Hand"
+              className="w-40 sm:w-52 md:w-80 transform transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+          <div className="p-4 md:pl-10 md:pr-8 text-right">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight tracking-tighter">
+              {t.heroTitle}
+            </h1>
+            <p className="mt-4 sm:mt-8 text-base sm:text-lg text-gray-700 max-w-xl font-bold ml-auto">
+>>>>>>> 5b56339bfae6a09e2254e388b34d656bb65c15d0
               {t.heroParagraph}
             </p>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Services Section */}
         <section id="services" className="py-12 sm:py-20">
           <h2 className="text-center text-3xl sm:text-5xl font-bold mb-8 sm:mb-12 tracking-tighter px-2">
@@ -202,6 +227,18 @@ export default function App() {
               <div
                 key={card.id}
                 className={`group w-full rounded-lg p-4 sm:p-6 flex flex-col justify-between ${card.bgColor} transition-transform hover:scale-105 shadow-md`}
+=======
+        {/* Services */}
+        <section id="services" className="py-20">
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-12 tracking-tighter">
+            {t.servicesTitle}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+            {serviceCards.map((card) => (
+              <div
+                key={card.id}
+                className={`group w-full h-[420px] rounded-lg p-6 flex flex-col justify-between ${card.bgColor} transition-transform hover:scale-105 shadow-md`}
+>>>>>>> 5b56339bfae6a09e2254e388b34d656bb65c15d0
               >
                 <div>
                   <div className="flex flex-wrap gap-2">
@@ -214,8 +251,13 @@ export default function App() {
                       </span>
                     ))}
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mt-4 leading-tight tracking-tight whitespace-pre-line">
                     {t[card.titleKey]}
+=======
+                  <h3 className="text-2xl sm:text-3xl font-bold mt-4 leading-tight tracking-tight whitespace-pre-line">
+                    {t[card.titleKey].replace(" e ", " e\n")}
+>>>>>>> 5b56339bfae6a09e2254e388b34d656bb65c15d0
                   </h3>
                 </div>
                 <div className="self-end mt-4">
@@ -228,12 +270,21 @@ export default function App() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Education Section */}
         <section id="education" className="text-center py-12 sm:py-20 md:py-32 px-2">
           <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold max-w-4xl mx-auto leading-tight tracking-tighter px-2 sm:px-0">
             {t.educationTitle}
           </h2>
           <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto px-2">
+=======
+        {/* Education */}
+        <section id="education" className="text-center py-20 md:py-32 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold max-w-4xl mx-auto leading-tight tracking-tighter">
+            {t.educationTitle}
+          </h2>
+          <p className="mt-6 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
+>>>>>>> 5b56339bfae6a09e2254e388b34d656bb65c15d0
             {t.educationParagraph}
           </p>
           <div className="mt-8 sm:mt-10">
@@ -242,8 +293,13 @@ export default function App() {
               <ArrowUpRightIcon />
             </button>
           </div>
+<<<<<<< HEAD
           <div className="mt-10 sm:mt-16 px-2">
             <p className="text-lg sm:text-2xl md:text-4xl font-semibold text-gray-900 border-t border-b border-gray-300 py-4 sm:py-6 px-2 sm:px-4 inline-block tracking-wide bg-[#EFE7DA] rounded-lg">
+=======
+          <div className="mt-16 px-4">
+            <p className="text-xl sm:text-2xl md:text-4xl font-semibold text-gray-900 border-t border-b border-gray-300 py-6 px-4 inline-block tracking-wide">
+>>>>>>> 5b56339bfae6a09e2254e388b34d656bb65c15d0
               {t.esgSlogan}
             </p>
           </div>
@@ -251,6 +307,7 @@ export default function App() {
 
         <hr className="border-gray-300" />
 
+<<<<<<< HEAD
         {/* Footer Section */}
         <footer id="footer" className="py-8 sm:py-12 px-2">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
@@ -261,6 +318,18 @@ export default function App() {
             <div className="sm:text-right flex flex-col items-center sm:items-end">
               <p className="font-bold text-sm sm:text-base">{t.footerContact}</p>
               <a href="mailto:oi@hand.ag" className="block hover:underline text-sm sm:text-base">
+=======
+        {/* Footer */}
+        <footer id="footer" className="py-12 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="text-center md:text-left">
+              <HandLogo className="mx-auto md:mx-0" />
+              <p className="font-medium mt-2">{t.footerLocation}</p>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="font-bold">{t.footerContact}</p>
+              <a href="mailto:oi@hand.ag" className="block hover:underline">
+>>>>>>> 5b56339bfae6a09e2254e388b34d656bb65c15d0
                 oi@hand.ag
               </a>
               <a href="tel:+5511985682373" className="block hover:underline text-sm sm:text-base">
@@ -268,8 +337,13 @@ export default function App() {
               </a>
             </div>
           </div>
+<<<<<<< HEAD
           <div className="text-center mt-8 sm:mt-12 px-2">
             <h3 className="text-4xl sm:text-7xl md:text-9xl lg:text-[100px] font-bold tracking-tighter break-words leading-tight">
+=======
+          <div className="text-center mt-12">
+            <h3 className="text-5xl sm:text-7xl md:text-9xl lg:text-[150px] font-bold tracking-tighter break-words">
+>>>>>>> 5b56339bfae6a09e2254e388b34d656bb65c15d0
               {t.footerGreeting}
             </h3>
           </div>
