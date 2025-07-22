@@ -1,1 +1,3 @@
 node_modules
+# Ignorar build gerado pelo React
+build/
