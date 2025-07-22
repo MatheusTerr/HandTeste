@@ -54,7 +54,7 @@ const translations = {
     esgSlogan: "ESGwashing é cafona e a gente tem bom gosto",
     footerLocation: "São Paulo e Rio de Janeiro",
     footerContact: "CONTATO",
-    footerGreeting: "have a nice day"
+    footerGreeting: "have a nice day",
   },
   en: {
     location: "SÃO PAULO • RIO DE JANEIRO",
@@ -79,8 +79,8 @@ const translations = {
     esgSlogan: "ESGwashing is tacky and we have good taste",
     footerLocation: "São Paulo and Rio de Janeiro",
     footerContact: "CONTACT",
-    footerGreeting: "have a nice day"
-  }
+    footerGreeting: "have a nice day",
+  },
 };
 
 export default function App() {
@@ -113,6 +113,7 @@ export default function App() {
   return (
     <div className="bg-[#F9F9F7] min-h-screen font-sans text-black">
       <div className="container mx-auto px-4 md:px-8">
+        {/* Header */}
         <header className="flex justify-between items-center py-6">
           <HandLogo />
           <nav className="hidden md:flex items-center space-x-6">
@@ -134,35 +135,35 @@ export default function App() {
           </nav>
         </header>
 
-        {/* Hero Section */}
-        <section id="hero" className="grid grid-cols-1 md:grid-cols-2 items-center bg-white">
-          <div className="bg-[#EFE7DA] flex justify-center items-center py-20 md:py-32">
+        {/* Hero */}
+        <section id="hero" className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4">
+          <div className="bg-[#EFE7DA] flex justify-center items-center py-12 sm:py-20 md:py-32">
             <img
               src="https://ik.imagekit.io/6iz6c073z/Png%20sem%20fundo/Logo1.png?updatedAt=1750806629388"
               alt="Logo da Hand"
-              className="w-64 md:w-80 transform transition-transform duration-300 hover:scale-105"
+              className="w-40 sm:w-52 md:w-80 transform transition-transform duration-300 hover:scale-105"
             />
           </div>
-          <div className="p-8 md:pl-20 md:pr-8 text-right">
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tighter">
+          <div className="p-4 md:pl-10 md:pr-8 text-right">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight tracking-tighter">
               {t.heroTitle}
             </h1>
-            <p className="mt-8 text-lg text-gray-700 max-w-xl font-bold ml-auto">
+            <p className="mt-4 sm:mt-8 text-base sm:text-lg text-gray-700 max-w-xl font-bold ml-auto">
               {t.heroParagraph}
             </p>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Services */}
         <section id="services" className="py-20">
-          <h2 className="text-center text-5xl font-bold mb-12 tracking-tighter">
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-12 tracking-tighter">
             {t.servicesTitle}
           </h2>
-          <div className="flex overflow-x-auto space-x-6 pb-4 -mx-4 px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
             {serviceCards.map((card) => (
               <div
                 key={card.id}
-                className={`group flex-shrink-0 w-[300px] h-[420px] rounded-lg p-6 flex flex-col justify-between ${card.bgColor} transition-transform hover:scale-105 shadow-md`}
+                className={`group w-full h-[420px] rounded-lg p-6 flex flex-col justify-between ${card.bgColor} transition-transform hover:scale-105 shadow-md`}
               >
                 <div>
                   <div className="flex space-x-2">
@@ -175,8 +176,8 @@ export default function App() {
                       </span>
                     ))}
                   </div>
-                  <h3 className="text-3xl font-bold mt-4 leading-tight tracking-tight whitespace-pre-line">
-                    {t[card.titleKey].replace(" e ", " e")}
+                  <h3 className="text-2xl sm:text-3xl font-bold mt-4 leading-tight tracking-tight whitespace-pre-line">
+                    {t[card.titleKey].replace(" e ", " e\n")}
                   </h3>
                 </div>
                 <div className="self-end">
@@ -189,12 +190,12 @@ export default function App() {
           </div>
         </section>
 
-        {/* Education Section */}
-        <section id="education" className="text-center py-20 md:py-32">
-          <h2 className="text-5xl md:text-6xl font-bold max-w-4xl mx-auto leading-tight tracking-tighter">
+        {/* Education */}
+        <section id="education" className="text-center py-20 md:py-32 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold max-w-4xl mx-auto leading-tight tracking-tighter">
             {t.educationTitle}
           </h2>
-          <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="mt-6 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
             {t.educationParagraph}
           </p>
           <div className="mt-10">
@@ -204,7 +205,7 @@ export default function App() {
             </button>
           </div>
           <div className="mt-16 px-4">
-            <p className="text-3xl md:text-4xl font-semibold text-gray-900 border-t border-b border-gray-300 py-6 px-4 inline-block tracking-wide">
+            <p className="text-xl sm:text-2xl md:text-4xl font-semibold text-gray-900 border-t border-b border-gray-300 py-6 px-4 inline-block tracking-wide">
               {t.esgSlogan}
             </p>
           </div>
@@ -212,14 +213,14 @@ export default function App() {
 
         <hr className="border-gray-300" />
 
-        {/* Footer Section */}
-        <footer id="footer" className="py-12">
+        {/* Footer */}
+        <footer id="footer" className="py-12 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <HandLogo />
-              <p className="font-medium">{t.footerLocation}</p>
+            <div className="text-center md:text-left">
+              <HandLogo className="mx-auto md:mx-0" />
+              <p className="font-medium mt-2">{t.footerLocation}</p>
             </div>
-            <div className="md:text-right">
+            <div className="text-center md:text-right">
               <p className="font-bold">{t.footerContact}</p>
               <a href="mailto:oi@hand.ag" className="block hover:underline">
                 oi@hand.ag
@@ -230,7 +231,7 @@ export default function App() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <h3 className="text-8xl md:text-9xl lg:text-[150px] font-bold tracking-tighter break-words">
+            <h3 className="text-5xl sm:text-7xl md:text-9xl lg:text-[150px] font-bold tracking-tighter break-words">
               {t.footerGreeting}
             </h3>
           </div>
