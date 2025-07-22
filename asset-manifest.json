@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Hand-Site/static/css/main.2b374757.css",
+    "main.js": "/Hand-Site/static/js/main.0e3affd7.js",
+    "index.html": "/Hand-Site/index.html",
+    "main.2b374757.css.map": "/Hand-Site/static/css/main.2b374757.css.map",
+    "main.0e3affd7.js.map": "/Hand-Site/static/js/main.0e3affd7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b374757.css",
+    "static/js/main.0e3affd7.js"
+  ]
+}
