@@ -20,7 +20,7 @@ const ArrowUpRightIcon = () => (
 
 const HandLogo = ({ className }) => (
   <img
-    src=""
+    src="https://ik.imagekit.io/6iz6c073z/Png%20sem%20fundo/Nome1.png?updatedAt=1750806629889"
     alt="Hand Agency Logo"
     className={`w-28 sm:w-40 md:w-48 lg:w-56 transform transition-transform duration-300 hover:scale-105 ${className}`}
     onError={(e) => {
