@@ -184,11 +184,11 @@ export default function App() {
               className="w-44 sm:w-56 md:w-72 lg:w-80 transform transition-transform duration-300 hover:scale-105"
             />
           </div>
-          <div className="p-6 md:pl-20 md:pr-8 text-right">
+          <div className="p-6 md:pl-20 md:pr-8 text-left">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight tracking-tighter">
               {t.heroTitle}
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-gray-700 max-w-xl font-bold ml-auto">
+            <p className="mt-6 text-base sm:text-lg text-gray-700 max-w-xl font-bold">
               {t.heroParagraph}
             </p>
           </div>
